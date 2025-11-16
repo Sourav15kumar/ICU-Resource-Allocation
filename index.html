@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ICU Resource Allocation – Knapsack Optimization</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,24 +12,27 @@
     <h1>ICU Resource Allocation (Knapsack Optimization)</h1>
 
     <div class="input-section">
-        <label>Number of ICU Beds:</label>
-        <input id="beds" type="number" min="1" value="3">
+        <div class="input-group">
+            <label>Number of ICU Beds:</label>
+            <input id="beds" type="number" min="1" value="3">
+        </div>
         <button onclick="runKnapsack()">Run Optimization</button>
     </div>
 
     <h2>Patient Data</h2>
-    <table id="patient-table">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>P(with ICU)</th>
-            <th>P(without ICU)</th>
-            <th>Gain</th>
-        </tr>
-        </thead>
-        <tbody id="patient-body">
-        </tbody>
-    </table>
+    <div class="table-wrapper">
+        <table id="patient-table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>P(with ICU)</th>
+                <th>P(without ICU)</th>
+                <th>Gain</th>
+            </tr>
+            </thead>
+            <tbody id="patient-body"></tbody>
+        </table>
+    </div>
 
     <h2>Selected Patients (ICU Assigned)</h2>
     <ul id="selected"></ul>

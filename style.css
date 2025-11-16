@@ -24,6 +24,13 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
+.input-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 input {
     padding: 8px;
     width: 150px;
@@ -43,10 +50,16 @@ button:hover {
     background: #003fba;
 }
 
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* makes table scrollable on small screens */
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    min-width: 600px;
 }
 
 table th, table td {
@@ -59,4 +72,35 @@ ul {
     background: #f1f6ff;
     padding: 15px;
     border-radius: 8px;
+}
+
+/* ------------------------------------
+      ACTUAL RESPONSIVE DESIGN HERE
+------------------------------------- */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
 }
